@@ -2060,11 +2060,9 @@
                     <span class="hero-name-line2 glow-cyan">Ahsan</span>
                 </h1>
 
-                <!-- Typing animation row -->
                 <div class="hero-typing-row a3">
                     <span class="hero-prompt">&gt;</span>
-                    <span id="hero-typed"></span>
-                    <span class="hero-typing-cursor"></span>
+                    <span id="hero-typed">Where Engineering Meets Intelligence</span>
                 </div>
 
                 <p class="hero-desc a4">
@@ -2142,31 +2140,6 @@
         </div>
 
     </section>
-
-
-    <!-- ════════════════════════════════════════════════
-         MARQUEE
-    ════════════════════════════════════════════════ -->
-    <div class="marquee-strip" aria-hidden="true">
-        <div class="marquee-inner marquee-track">
-            <span class="marquee-item">Agentic AI</span>
-            <span class="marquee-item">Retrieval-Augmented Generation</span>
-            <span class="marquee-item">Natural Language Processing</span>
-            <span class="marquee-item">Deep Learning</span>
-            <span class="marquee-item">Machine Learning</span>
-            <span class="marquee-item">API Integration</span>
-            <span class="marquee-item">Prompt Engineering</span>
-            <!-- Duplicate set for seamless loop -->
-            <span class="marquee-item">Agentic AI</span>
-            <span class="marquee-item">Retrieval-Augmented Generation</span>
-            <span class="marquee-item">Natural Language Processing</span>
-            <span class="marquee-item">Deep Learning</span>
-            <span class="marquee-item">Machine Learning</span>
-            <span class="marquee-item">API Integration</span>
-            <span class="marquee-item">Prompt Engineering</span>
-        </div>
-    </div>
-
 
     <!-- ════════════════════════════════════════════════
          ABOUT
@@ -2815,43 +2788,6 @@
             });
         })();
 
-
-        /* ── Typing Animation ────────────────────────────── */
-        (function () {
-            const el = document.getElementById('hero-typed');
-            const roles = ['Agentic AI Developer', 'LLM Engineer', 'RAG Architect', 'NLP Specialist'];
-            let roleIndex = 0, charIndex = 0, deleting = false;
-
-            function tick() {
-                const currentRole = roles[roleIndex];
-
-                if (!deleting) {
-                    // Type forward
-                    if (charIndex < currentRole.length) {
-                        el.textContent = currentRole.slice(0, ++charIndex);
-                    } else {
-                        // Pause before deleting
-                        setTimeout(() => { deleting = true; }, 2200);
-                        return;
-                    }
-                } else {
-                    // Delete backward
-                    if (charIndex > 0) {
-                        el.textContent = currentRole.slice(0, --charIndex);
-                    } else {
-                        deleting = false;
-                        roleIndex = (roleIndex + 1) % roles.length;
-                    }
-                }
-
-                setTimeout(tick, deleting ? 55 : 85);
-            }
-
-            setTimeout(tick, 2000);
-        })();
-
-
-        /* ── Terminal Typewriter ─────────────────────────── */
         (function () {
             const terminalLines = [
                 { text: '$ ssh aman@ai-engineer.dev', style: 'color:#4ade80', delay: 400 },
